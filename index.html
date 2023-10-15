@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Assignment 2</title>
+
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
@@ -15,21 +17,55 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Raleway:wght@300&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="a2.css"
-
-
+    <link rel="stylesheet" href="a2.css">
 </head>
 
 <body>
-    <h1>Global Methane Emissions</h1>
-    <p>Methane is a greenhouse gas that environmentalists are concerned about. It has a greater warming power than CO2. </p>
-
-    <h2>Map of global emissions</h2>
-    <img src="map.png">
-
-    <h2>Top emissions</h2>
-    <div id="bar">
+    <div style="text-align: center; font-size: 20pt;">
+        <h1>Global Methane Emissions</h1>
     </div>
-</body>
 
+    <div class = "row">
+            <div id="yourVegaContainer" class="col big" style="padding: left;"></div>
+
+        <div class="col small">
+            <p>Some explanatory text about methane</p>
+            <p>additional paragraphs</p>
+            <p>additional paragraphs</p>
+        </div>            
+        <div style="width: 55%; text-align: center;">
+                <button class="button" onclick="toggleVisualization('spec1')">Show Total Emissions</button>
+                <button class="button" onclick="toggleVisualization('spec2')">Show Emissions Per Capita</button>
+                </div>
+    </div>
+<br>
+
+<div class="box">
+<div style="display:inline-block; color:#3438CB">&#9632 Agriculture</div>
+<div style="display: inline-block; color:#fbb89e">&#9632 Waste</div>
+<div style="display: inline-block; color:#c1cdc1">&#9632 Other</div>
+</div>
+    <div class = "row">
+        <div id = "bar" class="col six">
+            </div>
+
+        <div class="col six">
+            <p>text</p>
+        </div>
+
+        <div id = "pie" class = "col six">
+            </div>
+            
+        <div class="col six">
+            <p>text</p>
+        </div>
+     <div id="box" class="col six"></div>
+
+     <div class="col six">
+        <p>text</p>
+    </div>
+
+   
+
+</body>
 </html>
