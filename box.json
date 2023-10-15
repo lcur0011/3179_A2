@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A vertical box plot showing median, min, and max body mass of penguins.",
+  "width": "container",
+  "data": {"url": "methane.csv"},
+  "mark": {
+    "type": "boxplot",
+    "extent": "min-max"
+  },
+  "encoding": {
+    "x": {"field": "type", "type": "nominal"},
+    "color":{
+      "legend": null,
+      "field": "type",
+      "type": "nominal",
+      "scale": {"domain": ["Agriculture", "Waste", "Other"],
+                  "range": ["#3438CB", "#fbb89e", "#c1cdc1"]},
+                  "title": "Emission Type"},
+    "y": {
+      "field": "emissions",
+      "type": "quantitative",
+      "scale": {"zero": false}
+    }
+  }
+}

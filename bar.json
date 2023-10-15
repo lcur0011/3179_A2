@@ -1,20 +1,22 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": { "text": "Emissions in 2019-2021" },
+    "width": "container",
     "data": {
-    "url": "methane.csv"
-    },
-    "transform": [{"filter": "datum.emissions>5000"}],
+        "url": "methane.csv"},
+    "transform": [{"filter": "datum.totalEmissions>5000"}],
     "mark": "bar",
     "encoding": {
     "x": { "field": "country", "type": "nominal", "title": "Country" },
     "y": { "field": "emissions", "type": "quantitative", "title": "Emissions (kT"},
     "color":{
-        "field": "type",
-        "type": "nominal",
+        "legend": null,
+        "field": "type","type": "nominal",
         "scale": {"domain": ["Agriculture", "Waste", "Other"],
-                    "range": ["#3b722e", "#fbb89e", "#c1cdc1"]},
+                    "range": ["#3438CB", "#fbb89e", "#c1cdc1"]},
                     "title": "Emission Type"
-    }
+    },
+    "tooltip":[{ "field": "country", "type": "nominal", "title": "Country" },
+    { "field": "emissions", "type": "quantitative", "title": "Emissions (kT)"}]
+    
 }
     }

@@ -1,9 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title":  {
-        "text":"Total Emissions (kT)",
-        "fontSize": 25,
-        "font": "Libre Baskerville"},
+        "text":"Emissions Per Capita (kT)",
+        "fontSize": 25, "font": "Libre Baskerville" },
     "width": "container",
     "height": 400,
     "projection": {"type": "equalEarth"}, 
@@ -32,7 +31,7 @@
     "url": "methane.csv"
     },
     "key": "country",
-    "fields": ["totalEmissions"]
+    "fields": ["emissionsPerCapita"]
     }
     }
     ],
@@ -40,14 +39,14 @@
     "mark": {"type": "geoshape"},
     "encoding": {
     "color": {
-    "field": "totalEmissions",
+    "field": "emissionsPerCapita",
     "type": "quantitative",
     "title": "Emissions (kt)"
     },
     "tooltip": [
     {"field": "properties.NAME", "type": "nominal", "title":
     "Country"},
-    {"field": "totalEmissions", "type": "quantitative", "title": "Total Emissions"}
+    {"field": "emissionsPerCapita", "type": "quantitative", "title": "Emissions per Capita"}
     ]
     }
     }

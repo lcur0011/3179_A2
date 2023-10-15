@@ -1,12 +1,63 @@
 h1 {
     font-family: 'Libre Baskerville', serif;
 }
+
 h2 {
     font-family: 'Libre Baskerville', serif;
 }
+
 p {
     font-family: 'Raleway', sans-serif;
 }
-wmap{
-    width: 400;
+
+.col {
+    float:left;
+    padding: 0px;
+}
+
+.small {
+    width: 30vw;
+}
+
+.big {
+    width: 60vw;
+}
+
+.half {
+    width: 50vw;
+}
+
+.qtr {
+    width: 25vw;
+}
+
+.six{
+    width: 14vw;
+}
+
+.row:after {
+    content: "";    
+    display: table;
+    clear: both;}
+
+.button {
+    background-color: #23829E;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.box{
+    width:fit-content;  
+    height: fit-content;
+    text-align: end;
+
 }
